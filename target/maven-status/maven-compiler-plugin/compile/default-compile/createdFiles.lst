@@ -1,0 +1,14 @@
+test\controllers\TablesRestControllers.class
+test\controllers\InboxController.class
+test\generator\Generator.class
+test\beans\Message.class
+test\beans\User.class
+test\controllers\LogInController.class
+test\controllers\UsersRestController.class
+test\beans\Order.class
+test\controllers\RegisterController.class
+test\dao\UserDAO.class
+test\controllers\MessageController.class
+test\dao\MessageDAO.class
+test\controllers\TrashController.class
+test\dao\OrderDAO.class

@@ -1,0 +1,59 @@
+
+ FLIPCOINGR.COM
+
+##In one-line
+ This is an application for coin exchanging with offline messaging availability. 
+## Exchange coins
+Every user can see price offers of various coins from other users and buy demands. He or she can place an order of buy or sell coins on a price and an ammount. 
+## Messaging
+Users,  each other,  can send and receive text messages. 
+You can see your messages. 
+You can reply to a message.
+You can trash your messages.
+You can see your sent messages. 
+When you are sending a message you have to write receiver and subject. Your message has a limit of 250 characters. 
+All of your messages (trashed or not) are viewed by the God. So you have to be a good and polite guy.    
+## Roles 
+ There are three types of users on messaging and users managing: simple users, administrators and God
+ - users: They are  messaging as described above and setting buy/sell coin orders
+ - administrators: They can change the role of users (make them admin and vice versa) or delete them.   They have also the rights of users 
+ - God:  Only one person has the role of God.  He or She can see all the messages of all users or administrators. He or She also has the rights of administrators
+At first there is only one: The God... 
+By default every new account has the role of user.
+## Getting Started!!!
+Firstly you can create a new account with "sign up" on first screen
+Secondly you can sign in with your acount. 
+After sign in you are be in main menu 
+##Main Menu
+ on left-end  there is a navigation bar, where there are 4 choices: markets, orders, balances and inbox
+   # Markets :    By default in menu you see the first choice, the Markets.
+on left:  Table of Markets
+ Here you are seeing some online data for the last 24 hours. The first column-"Market" includes the name of the coin. The second column-"Price" informs for the current price of the relative coin. The third column-"Vol." informs for the total amount on that particular exchanged the last 24 hours. The fourth column-"+/-"  is the variation of price. 
+on right: Orders 
+  Here you can set orders: Firstly you click on the coin you want on table and after you place the price and amount you want to buy or sell the coin of your choice
+  #Orders  
+   Here will be the table with the orders that you have done. 
+  #Balances 
+   Here will be the with the amount of each coin of your deposit
+  #Messages
+   Here are your messages messages
+   You can send a new message, see the sent messages and the trashed 
+   With click on table on a message it will be opened the message you choose in detail
+    ##logout
+    on right-up there is a button where you can logout 
+   #Admin extras
+   If you are admin you have the extra choice on the right-up button: Manage users.
+   On this choice you can search the user you want with search bar and choose if you want to give him/her a role or delete his/her account 
+
+  #God extras 
+God will have the choice also to open a page with all messages   
+  
+  
+   
+
+  '<-- "ÌÞëá Ìïõ Êþäéêá" TeamCode--)
+ 
+ 
+
+
+

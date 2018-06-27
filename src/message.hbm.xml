@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="test.beans.Message" table="mydb.message">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="message" type="java.lang.String">
+			<column name="message" />
+		</property>
+		<property name="sender" type="java.lang.String">
+			<column name="sender" />
+		</property>
+		<property name="reciever" type="java.lang.String">
+			<column name="reciever" />
+		</property>
+		<property name="dateAsString" type="java.lang.String">
+			<column name="dateAsString" />
+		</property>
+		<property name="subject" type="java.lang.String">
+			<column name="subject" />
+		</property>
+		<property name="trash" type="java.lang.Boolean">
+			<column name="trash" />
+		</property>
+		<property name="readen" type="java.lang.Boolean">
+			<column name="readen" />
+		</property>
+		<property name="deleted" type="java.lang.Boolean">
+			<column name="deleted" />
+		</property>
+	</class>
+</hibernate-mapping>

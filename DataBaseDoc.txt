@@ -1,0 +1,86 @@
+ 
+
+
+
+ CREATE TABLE `buys` (
+  `user` int(11) DEFAULT NULL,
+  `coin` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `volume` int(11) DEFAULT NULL,
+  KEY `fk_buys` (`user`),
+  CONSTRAINT `fk_buys` FOREIGN KEY (`user`) REFERENCES `users` (`id`)
+)
+
+--------------------------------------
+ CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `messagedata` varchar(250) DEFAULT NULL,
+  `datetime` varchar(45) DEFAULT NULL,
+  `unread` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+)
+-------------------------------------------------------------
+CREATE TABLE `sells` (
+  `user` int(11) DEFAULT NULL,
+  `coin` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `volume` int(11) DEFAULT NULL,
+  KEY `fk_sells` (`user`),
+  CONSTRAINT `fk_sells` FOREIGN KEY (`user`) REFERENCES `users` (`id`)
+)
+-------------------------------------------------------
+ CREATE TABLE `sendmessage` (
+  `message` int(11) DEFAULT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  KEY `fk_message` (`message`),
+  KEY `fk_sender` (`sender`),
+  KEY `fk_receiver` (`receiver`),
+  CONSTRAINT `fk_message` FOREIGN KEY (`message`) REFERENCES `messages` (`id`),
+  CONSTRAINT `fk_receiver` FOREIGN KEY (`receiver`) REFERENCES `users` (`id`),
+  CONSTRAINT `fk_sender` FOREIGN KEY (`sender`) REFERENCES `users` (`id`)
+)
+---------------------------------------------------
+ CREATE TABLE `sendmessage` (
+  `message` int(11) DEFAULT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  KEY `fk_message` (`message`),
+  KEY `fk_sender` (`sender`),
+  KEY `fk_receiver` (`receiver`),
+  CONSTRAINT `fk_message` FOREIGN KEY (`message`) REFERENCES `messages` (`id`),
+  CONSTRAINT `fk_receiver` FOREIGN KEY (`receiver`) REFERENCES `users` (`id`),
+  CONSTRAINT `fk_sender` FOREIGN KEY (`sender`) REFERENCES `users` (`id`)
+)
+
+----------------
+ CREATE TABLE `trashmessages` (
+  `id` int(11) NOT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `messagedata` varchar(250) DEFAULT NULL,
+  `datetime` varchar(45) DEFAULT NULL,
+  `unread` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+)
+------------------------------------------------------------------------
+ CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `privilege` varchar(45) DEFAULT 'user',
+  `deleted` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+)
+
+-----------------------------
+
+Trigger: 
+insert into trashmessages
+select * from messages where id=old.id 
+
+
